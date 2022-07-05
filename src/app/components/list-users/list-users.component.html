@@ -1,1 +1,7 @@
-<p>list-users works!</p>
+<ng-container *ngIf="users$ | async as users">
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.name }}
+    </li>
+  </ul>
+</ng-container>>

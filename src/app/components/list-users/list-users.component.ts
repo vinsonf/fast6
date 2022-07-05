@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-list-users',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListUsersComponent implements OnInit {
 
+  users$ = of([{name: 'John'}, {name: 'Jane'}]);
   constructor() { }
 
   ngOnInit(): void {
